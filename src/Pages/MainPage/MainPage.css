@@ -1,21 +1,23 @@
 .main-page {
   scroll-behavior: smooth;
   display: flex;
-  min-height: 100vh;
-  padding-top: 60px; /* Match this with the new navbar height */
+  flex: 1;
+  padding-top: 70px; /* Match this with the navbar height */
+  padding-bottom: 0; /* Remove bottom padding */
 }
 
 .sidebar {
   width: 200px;
   position: fixed;
   left: 0;
-  top: 60px; /* Match this with the new navbar height */
+  top: 70px; /* Match this with the navbar height */
   bottom: 0;
   padding: 20px;
   overflow-y: auto;
   border-right: 1px solid #e0e0e0;
   transition: box-shadow 0.3s ease;
   background-color: #fff; /* Add a background color to cover content behind */
+  z-index: 1001; /* Ensure it's below the navbar but above other content */
 }
 
 .sidebar:hover {
@@ -101,6 +103,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 70px; /* Adjust this value as needed */
 }
 
 .project-explanation {
@@ -268,7 +271,7 @@ html {
 
   .content {
     margin-left: 0;
-    padding: 20px;
+    padding: 20px 20px 0; /* Remove bottom padding */
     max-width: 100%;
   }
 
@@ -320,4 +323,11 @@ html {
   .project-explanation p {
     font-size: 0.9rem;
   }
+}
+
+/* Add this new class */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
 .main-page {
   scroll-behavior: smooth;
   display: flex;
@@ -142,6 +148,7 @@
   margin-bottom: 1.5rem;
   position: relative;
   padding-bottom: 0.5rem;
+  font-weight: 600;
 }
 
 .project-explanation h2::after {
@@ -158,6 +165,7 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: #555;
+  font-weight: 400;
 }
 
 .submit-file-button {
@@ -175,6 +183,7 @@
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.5px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .submit-file-button:hover {
@@ -205,9 +214,10 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   outline: none;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 500;
   letter-spacing: 0.5px;
   margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .file-upload-button {

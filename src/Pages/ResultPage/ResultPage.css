@@ -1,0 +1,37 @@
+.result-page {
+  padding: 2rem;
+  padding-top: 100px; /* Increased top padding to create more space below navbar */
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.result-page h1 {
+  margin-bottom: 2rem;
+}
+
+.result-container {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-container h2 {
+  margin-top: 0;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

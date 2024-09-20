@@ -1,0 +1,323 @@
+.main-page {
+  scroll-behavior: smooth;
+  display: flex;
+  min-height: 100vh;
+  padding-top: 60px; /* Match this with the new navbar height */
+}
+
+.sidebar {
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 60px; /* Match this with the new navbar height */
+  bottom: 0;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease;
+  background-color: #fff; /* Add a background color to cover content behind */
+}
+
+.sidebar:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar nav ul li a:hover {
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.sidebar nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.sidebar nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.sidebar nav ul li a.active {
+  color: #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.sidebar nav ul li a.active::after {
+  transform: scaleX(1);
+}
+
+/* Scroll indicator */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.content {
+  flex-grow: 1;
+  margin-left: 200px; /* This should match the sidebar width */
+  padding: 20px 40px;
+  max-width: calc(100% - 200px); /* Subtract sidebar width from full width */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-explanation {
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 60px;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-explanation:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.15);
+}
+
+.project-explanation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(to right, #4CAF50, #2196F3, #9C27B0);
+  border-radius: 6px 6px 0 0;
+}
+
+.project-explanation h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.project-explanation h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #2196F3;
+}
+
+.project-explanation p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.submit-file-button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.submit-file-button:hover {
+  background-color: #0056b3;
+}
+
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Full width of the container */
+  margin-top: 20px;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.file-upload-button,
+.submit-file-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.file-upload-button {
+  background-color: #4CAF50;
+}
+
+.file-upload-button:hover {
+  background-color: #45a049;
+}
+
+.submit-file-button {
+  background-color: #007bff;
+}
+
+.submit-file-button:hover {
+  background-color: #0056b3;
+}
+
+/* Remove duplicate styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* Adjust this to match your navbar height */
+  background-color: #fff; /* Or any color you prefer */
+  z-index: 1000; /* Ensure navbar is above other content */
+  /* Add any other styles you want for your navbar */
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .main-page {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .sidebar nav ul li {
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .project-explanation {
+    padding: 2rem;
+    min-height: auto;
+  }
+
+  .project-explanation h2 {
+    font-size: 1.8rem;
+  }
+
+  .project-explanation p {
+    font-size: 1rem;
+  }
+
+  .file-upload-button,
+  .submit-file-button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    height: 50px;
+  }
+
+  .main-page {
+    padding-top: 50px;
+  }
+
+  .sidebar nav ul {
+    flex-direction: column;
+  }
+
+  .sidebar nav ul li {
+    margin-right: 0;
+  }
+
+  .project-explanation {
+    padding: 1.5rem;
+  }
+
+  .project-explanation h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-explanation p {
+    font-size: 0.9rem;
+  }
+}
